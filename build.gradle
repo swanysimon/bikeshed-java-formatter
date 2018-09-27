@@ -1,0 +1,26 @@
+plugins {
+    id "eclipse"
+    id "idea"
+    id "java"
+    id "net.ltgt.errorprone"
+}
+
+repositories {
+    mavenCentral()
+}
+
+group "com.github"
+
+wrapper {
+    gradleVersion = "${gradle_version}"
+}
+
+import com.github.bikeshed.ShowTestRunPlugin
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: ShowTestRunPlugin
+}

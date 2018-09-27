@@ -1,0 +1,17 @@
+import com.github.bikeshed.BikeshedJavaPlugin
+
+apply plugin: BikeshedJavaPlugin
+
+dependencies {
+    annotationProcessor("org.immutables:value:${immutables_version}")
+    compileOnly("org.immutables:value-annotations:${immutables_version}")
+    testAnnotationProcessor("org.immutables:value:${immutables_version}")
+    testCompile("org.assertj:assertj-core:${assertj_version}")
+    testCompileOnly("org.immutables:value-annotations:${immutables_version}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junit_version}")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:${junit_version}")
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
