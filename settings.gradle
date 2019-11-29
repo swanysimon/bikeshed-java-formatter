@@ -5,4 +5,5 @@ pluginManagement.plugins {
 rootProject.name = "bikeshed-java-formatter"
 
 include ":lexer"
+include ":common"
 

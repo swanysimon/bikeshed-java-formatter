@@ -45,6 +45,7 @@ class BikeshedJavaPlugin implements Plugin<Project> {
                 options.compilerArgs << "-Werror"
                 options.deprecation = true
                 options.errorprone.disableWarningsInGeneratedCode = true
+                options.incremental = true
                 options.warnings = true
             }
         }

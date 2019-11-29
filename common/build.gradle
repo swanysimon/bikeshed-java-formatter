@@ -1,0 +1,8 @@
+import com.github.bikeshed.BikeshedJavaPlugin
+
+apply plugin: BikeshedJavaPlugin
+
+dependencies {
+    annotationProcessor "org.immutables:value:${immutables_version}"
+    compileOnly "org.immutables:value-annotations:${immutables_version}"
+}
